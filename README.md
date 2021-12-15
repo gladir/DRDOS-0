@@ -19,6 +19,10 @@ Voici la liste des différents fichiers proposés dans DRDOS-0 :
 			<td><b>COMMAND.PAS</b></td>
 			<td>Cette commande permet de lancer l'interpréteur de commande DR-DOS.</td>
 		</tr>
+	        <tr>
+			<td><b>DELQ</b></td>
+			<td>Cette commande permet d'effectuer la suppression de fichier en demandant une confirmation.</td>
+		</tr>
 		<tr>
 		    	<td><b>DISKCOPY.PAS</b></td>
 		    	<td>Cette commande permet de copier des disquettes ou des images.</td>
