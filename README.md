@@ -38,6 +38,10 @@ Voici la liste des différents fichiers proposés dans DRDOS-0 :
 			<td>Cette commande permet de rechercher une chaine de caractères dans des fichiers. Cette commande est un équivalent du DOS.</td>
 		</tr>
 		<tr>
+			<td><b>FORMAT.PAS</b></td>
+			<td>Cette commande permet de formater un unite de disquette.</td>
+		</tr>
+		<tr>
 			<td><b>MORE.PAS</b></td>
 			<td>Cette commande permet de recevoir l'entrée puis l'affichage sur un périphérique un écran à la fois.</td>
 		</tr>
