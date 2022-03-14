@@ -32,6 +32,7 @@ BEGIN
   WriteLn('TOUCH : Cette commande permet de modifier leur d''un fichier.');
   WriteLn;
   WriteLn('Syntaxe : TOUCH [-t CCAAMMJJhhmmSS] nomdufichier');
+  WriteLn('Syntaxe : TOUCH [/T:CCAAMMJJ] [/D:hhmmSS] nomdufichier');
   WriteLn;
   WriteLn('Exemple : TOUCH abcd.txt -t 20100101235910');
  End
@@ -51,11 +52,11 @@ BEGIN
     Else
    If ParamStr(I)='-t'Then OptionFlag:=_t Else
    If StrToUpper(Copy(ParamStr(I),1,3))='/T:'Then Begin
-    TimeString:=Copy(ParamStr(I),4,255)
+    TimeString:=Copy(ParamStr(I),4,255);
    End
     Else
    If StrToUpper(Copy(ParamStr(I),1,3))='/D:'Then Begin
-    DateString:=Copy(ParamStr(I),4,255)
+    DateString:=Copy(ParamStr(I),4,255);
    End
     Else
    Begin
