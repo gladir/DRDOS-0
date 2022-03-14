@@ -83,7 +83,7 @@ Begin
 End;
 
 BEGIN
- If ParamStr(1)='/?'Then Begin
+ If(ParamStr(1)='/?')or(StrToUpper(ParamStr(1))='/H')Then Begin
   WriteLn('ATTRIB - Cette commande permet de demander ou changer l''attribut d''un fichier');
   WriteLn;
   WriteLn('Syntaxe : ATTRIB nomdufichier [+R|-R] [+A|-A] [+S|-S] [+H|-H]');
