@@ -41,6 +41,10 @@ Voici la liste des différents fichiers proposés dans DRDOS-0 :
 			<td><b>FORMAT.PAS</b></td>
 			<td>Cette commande permet de formater un unite de disquette.</td>
 		</tr>
+	        <tr>
+			<td><b>GRAFTABL.PAS</b></td>
+			<td>Cette commande permet d'effectuer le chargement en mémoire conventionnelle d'une table de police de caractères pour les modes graphiques.</td>
+		</tr>
 		<tr>
 			<td><b>MORE.PAS</b></td>
 			<td>Cette commande permet de recevoir l'entrée puis l'affichage sur un périphérique un écran à la fois.</td>
