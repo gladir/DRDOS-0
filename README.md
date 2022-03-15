@@ -61,4 +61,8 @@ Voici la liste des différents fichiers proposés dans DRDOS-0 :
 			<td><b>TOUCH.PAS</b></td>
 			<td>Cette commande permet de changer la date et l'heure d'un fichier.</td>
 	        </tr>	
+		<tr>
+			<td><b>XCOPY.PAS</b></td>
+			<td>Cette commande permet d'effectuer la copie étendue avec sous-répertoire de fichier(s) vers un nouvel emplacement.</td>
+		</tr>
 	</table>
