@@ -1,7 +1,7 @@
 { @author: Sylvain Maltais (support@gladir.com)
   @created: 2021
   @website(https://www.gladir.com/drdos-0)
-  @abstract(Target: Free Pascal)
+  @abstract(Target: Turbo Pascal, Free Pascal)
 }
 
 Program DISKCOPY;
@@ -40,7 +40,7 @@ Var
  NmHeads,NumTrack,SecPerTrk:Word;
  CurrParam:String;
  FileName1,FileName2:String;
- FileSource,FileTarget:File of Byte;
+ FileSource,FileTarget:File {$IFDEF FPC} of Byte{$ENDIF};
  Buffer:Array[0..511]of Byte;
  TeleDisk:TeleDiskHeader Absolute Buffer;
  _CurrTrack:Array[0..3]of Byte;
@@ -177,7 +177,7 @@ BEGIN
    If Buffer[$15]=$FDThen NumTrack:=40
                      Else NumTrack:=80;
    {$I-}Assign(FileTarget,FileName2);
-   Rewrite(FileTarget);{$I+}
+   Rewrite(FileTarget{$IFNDEF FPC},1{$ENDIF});{$I+}
    Repeat
     If ReadTrack(DskSource,CurrSide,CurrTrack,CurrSec,1,Buffer)<>0Then Begin
      WriteLn('Erreur de lecture de piste');
@@ -202,10 +202,10 @@ BEGIN
    WriteLn(FileName1,' vers ',FileName2);
    FillChar(Buffer,SizeOf(Buffer),0);
    {$I-}Assign(FileSource,FileName1);
-   Reset(FileSource);{$I+}
+   Reset(FileSource{$IFNDEF FPC},1{$ENDIF});{$I+}
    If IoResult=0Then Begin
     {$I-}Assign(FileTarget,FileName2);
-    Rewrite(FileTarget);{$I+}
+    Rewrite(FileTarget{$IFNDEF FPC},1{$ENDIF});{$I+}
     If IoResult<>0Then Begin
      Close(FileSource);
      WriteLn('Erreur de creation du fichier destinataire !');
