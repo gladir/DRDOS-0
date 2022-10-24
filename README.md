@@ -26,6 +26,10 @@ Voici la liste des différents fichiers proposés dans DRDOS-0 :
 			<td>Cette commande permet d'effectuer la suppression de fichier en demandant une confirmation.</td>
 		</tr>
 		<tr>
+			<td><b>CHKDSK.PAS</b></td>
+			<td>Cette commande permet de vérifier le disque. Cette commande est inspiré du DOS.</td>
+		</tr>			
+		<tr>
 			<td><b>DISKCOMP.PAS</b></td>
 			<td>Cette commande permet de comparer des disquettes ou des images.</td>
 		</tr>
